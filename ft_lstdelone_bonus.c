@@ -6,7 +6,7 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:30:08 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/04/25 14:38:15 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2022/05/08 14:19:27 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (del)
+	if (del && lst)
 		del(lst->content);
 	free(lst);
 }

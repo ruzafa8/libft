@@ -6,7 +6,7 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 12:01:50 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/05/08 17:20:29 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2022/05/08 17:37:28 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,10 @@ char	**ft_split(char const *s, char c)
 	if (!s_trim)
 		return (0);
 	if (ft_strlen(s_trim) == 0)
+	{
+		free(s_trim);
 		return ((char **) ft_calloc(1, sizeof(char *)));
+	}
 	res = ft_compute(s_trim, c, ft_num_words(s_trim, c));
 	free(s_trim);
 	return (res);

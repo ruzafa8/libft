@@ -6,7 +6,7 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 12:01:50 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/05/08 15:13:53 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2022/05/08 15:22:52 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	num_w = ft_num_words(s, c);
-	res = (char **) malloc((num_w + 1) * sizeof(char *));
+	res = (char **) ft_calloc(num_w + 1, sizeof(char *));
 	if (!res)
 		return (0);
 	word = 0;
@@ -105,6 +105,5 @@ char	**ft_split(char const *s, char c)
 			return (ft_delete(res, word));
 		word++;
 	}
-	res[word] = 0;
 	return (res);
 }

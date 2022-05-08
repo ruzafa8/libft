@@ -6,7 +6,7 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:40:18 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/04/27 11:08:19 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2022/05/08 14:14:15 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*res;
 	t_list	*new_node;
+	void	*new_content;
 
 	res = 0;
 	while (lst)
 	{
-		new_node = ft_lstnew(f(lst->content));
+		new_content = f(lst->content);
+		if (!new_content)
+		{
+			ft_lstclear(&res, del);
+			return (0);
+		}
+		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
 			ft_lstclear(&res, del);

@@ -11,8 +11,8 @@ all: $(NAME)
 	${CC} ${CFLAGS} -c $< -o $@
 
 $(NAME):
-	make re -C printf
-	cp printf/libftprintf.a ${NAME}
+	make -C printf
+	mv printf/libftprintf.a ${NAME}
 
 clean:
 	make clean -C printf
@@ -26,9 +26,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-bonus:
-	make fclean bonus -C printf
-	cp printf/libftprintf.a ${NAME}
 
 .PHONY: all clean fclean re bonus

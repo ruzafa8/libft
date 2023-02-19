@@ -6,13 +6,14 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 18:23:21 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/05/28 18:26:31 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:47:24 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
+# include "../ft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 

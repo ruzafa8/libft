@@ -6,7 +6,7 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 19:50:55 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/05/18 17:02:53 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:44:57 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include "libft/libft.h"
+# include "../ft/libft.h"
 
 typedef struct s_format
 {

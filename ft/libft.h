@@ -22,8 +22,25 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+/**
+  * Verifica si un caracter es una letra, ya sea mayúscula o minúscula.
+  * @param c el caracter como int.
+  * @returns 0 si no es una letra. Cualquier otro número si lo es.
+  */
 int		ft_isalpha(int c);
+
+/**
+  * Verifica si un caracter es un número.
+  * @param c el caracter como int.
+  * @returns 0 si no es un número. Cualquier otro número si lo es.
+  */
 int		ft_isdigit(int c);
+
+/**
+  * Verifica si un caracter es una letra o un número.
+  * @param c el caracter como int.
+  * @returns 0 si no es un número o letra. Cualquier otro número si lo es.
+  */
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);

@@ -6,7 +6,7 @@
 /*   By: aruzafa- <aruzafa-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:47:58 by aruzafa-          #+#    #+#             */
-/*   Updated: 2022/04/27 11:21:31 by aruzafa-         ###   ########.fr       */
+/*   Updated: 2023/04/02 11:21:31 by aruzafa-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,64 @@ int		ft_isdigit(int c);
   * @returns 0 si no es un número o letra. Cualquier otro número si lo es.
   */
 int		ft_isalnum(int c);
+
+/**
+  * Verifica si c es un unsigned char (7 bits) que pertenece a la tabla
+  * ASCII de caracteres.
+  * @param c caracter a verificar.
+  * @returns 0 si no pertenece a la tabla ASCII. Cualquier otro número
+  * si lo cumple.
+  */
 int		ft_isascii(int c);
+
+/**
+  * Los caracteres imprimibles son un subconjunto de la tabla ASCII.
+  * Esta función verifica si el entero recibido es un caracter imprimible
+  * de la tabla ASCII.
+  * @param c Entero para verificar si es imprimible.
+  * @returns 0 si no lo cumple. Cualquier otro número si lo cumple.
+  */
 int		ft_isprint(int c);
+
+/**
+  * Calcula el tamaño de un string.
+  * @param str el string a procesar.
+  * @returns el tamaño del string.
+  */
 size_t	ft_strlen(const char *str);
+
+/**
+  * Rellena los primero n bytes de un area de memoria con el valor
+  * especificado.
+  * La función modifica el contenido del puntero y también la devuelve.
+  * @param b El bloque de memoria a rellenar.
+  * @param c El valor que se quiere asignar.
+  * @param len El nº de bytes que se quieren rellenar.
+  * @returns Un puntero al principio de la misma posición 
+  * de memoria que se pasa por parámetros.
+  */
 void	*ft_memset(void *b, int c, size_t len);
+
+/**
+  * Rellena los primeros n bytes de un bloque de memoria a 0.
+  * La función modifica el contenido del puntero y también lo devuelve,
+  * por si acaso.
+  * @param s El bloque de memoria a rellenar.
+  * @param n El nº de bytes que se quieren rellenar a 0.
+  * @returns Un puntero al principio de la misma posición
+  * de memoria que se pasa por parámetros.
+  */
 void	ft_bzero(void *s, size_t n);
+
+/**
+  * Copia n bytes de un bloque de memoria, src, a otro bloque
+  * de memoria, dst. Los bloques de memoria no se pueden solapar. 
+  * Usa memmove si se solapan. :)
+  * @param dst bloque de memoria donde se ponen los bytes.
+  * @param src bloque de memoria del cual se copian los bytes.
+  * @param n nº de bytes a copiar.
+  * @returns un puntero al principio de dst por si acaso.
+  */
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);

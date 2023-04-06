@@ -141,7 +141,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
   * @param c el caracter a transformar.
   * @returns el caracter en mayúsculas si se puede convertir.
   * Si no el mismo caracter.
-  */ 
+  */
 int		ft_toupper(int c);
 
 /**
@@ -150,7 +150,7 @@ int		ft_toupper(int c);
   * @param c el caracter a transformar.
   * @returns el caracter en minúsculas si se puede convertir.
   * Si no el mismo caracter.
-  */ 
+  */
 int		ft_tolower(int c);
 
 /**
@@ -414,10 +414,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 /**
   * Itera la lista lst y aplica la función f al contenido de cada nodo.
   * Crea una lista resultante de la aplicación sucesiva de ’f’ sobre cada nodo. 
-  * La función ’del’ se utiliza para eliminar el contenido de un nodo, si hiciera falta.
+  * La función ’del’ se utiliza para eliminar el contenido de un nodo,
+  * si hiciera falta.
   * @param lst Puntero al principio de la lista.
   * @param f Función usada en la iteración de cada elemento de la lista.
-  * @param del Función utilizado para eliminar el contenido de un nodo, si es necesario.
+  * @param del Función utilizado para eliminar el contenido de un nodo,
+  * si es necesario.
   * @returns La nueva lista, o NULL si falla la reserva de memoria.
   */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));

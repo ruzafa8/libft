@@ -1,4 +1,4 @@
-![norminette](https://github.com/ruzafa8/libft/workflows/norminette/badge.svg)
+![norminette](https://github.com/ruzafa8/libft/workflows/norminette.yml/badge.svg)
 # libft
 First project of 42 School. This is a library of basic C functions.
 
